@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sage-50:  #E8F0E4;
+  --sage-100: #D0E4C8;
+  --sage-200: #A8C4A2;
+  --sage-400: #7A9E7E;
+  --sage-500: #5A8B5A;
+  --sage-600: #4A7C59;
+  --sage-800: #3D6B4F;
+  --sage-900: #2A4D38;
+  --forest:   #2C3E2D;
+  --cream:    #FAF7F0;
+  --beige:    #EDE8D8;
+  --mint:     #B8D4B4;
+  --bark:     #C4A882;
+  --brown:    #8B6F5E;
+  --text-dark: #2C3E2D;
+  --text-mid:  #5A6B5A;
+  --text-soft: #8A9E8A;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .bg-cream     { background-color: var(--cream); }
+  .bg-beige     { background-color: var(--beige); }
+  .bg-mint      { background-color: var(--mint); }
+  .bg-sage-50   { background-color: var(--sage-50); }
+  .bg-sage-100  { background-color: var(--sage-100); }
+  .bg-sage-400  { background-color: var(--sage-400); }
+  .bg-forest    { background-color: var(--forest); }
+
+  .text-forest    { color: var(--forest); }
+  .text-text-dark { color: var(--text-dark); }
+  .text-text-mid  { color: var(--text-mid); }
+  .text-text-soft { color: var(--text-soft); }
+  .text-bark      { color: var(--bark); }
+  .text-brown     { color: var(--brown); }
+  .text-sage-400  { color: var(--sage-400); }
+  .text-sage-500  { color: var(--sage-500); }
+  .text-sage-600  { color: var(--sage-600); }
+
+  .border-mint     { border-color: var(--mint); }
+  .border-beige    { border-color: var(--beige); }
+  .border-sage-100 { border-color: var(--sage-100); }
+  .border-sage-200 { border-color: var(--sage-200); }
+  .border-sage-400 { border-color: var(--sage-400); }
+  .border-sage-500 { border-color: var(--sage-500); }
+
+  .bg-sage-800 { background-color: var(--sage-800); }
+
+  .hover\:bg-sage-800:hover { background-color: var(--sage-800); }
+  .hover\:bg-beige:hover    { background-color: var(--beige); }
+  .hover\:border-mint:hover { border-color: var(--mint); }
+
+  .animate-sway {
+    animation: sway 3.5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes sway {
+  from { transform: rotate(-4deg); }
+  to   { transform: rotate(4deg); }
+}
+
+/* 탭바/상태바 영역 safe area */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-top    { padding-top: env(safe-area-inset-top); }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
