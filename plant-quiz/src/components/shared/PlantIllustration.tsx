@@ -1,5 +1,6 @@
 'use client'
 
+import { ReactElement } from 'react'
 import { cn } from '@/lib/utils'
 
 interface PlantIllustrationProps {
@@ -10,7 +11,7 @@ interface PlantIllustrationProps {
 }
 
 // 식물별 SVG 캐릭터 맵
-const ILLUSTRATIONS: Record<string, (size: number) => JSX.Element> = {
+const ILLUSTRATIONS: Record<string, (size: number) => ReactElement> = {
 
   sansevieria: (s) => (
     <svg width={s} height={s} viewBox="0 0 120 120" fill="none">
