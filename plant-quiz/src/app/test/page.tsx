@@ -24,7 +24,7 @@ export default function TestPage() {
   const [direction, setDirection] = useState<'forward' | 'back'>('forward')
   const [isLoading, setIsLoading] = useState(false)
   const [loadingMsg, setLoadingMsg] = useState(0)
-  const timerRef = useRef<NodeJS.Timeout>()
+  const timerRef = useRef<NodeJS.Timeout | undefined>(undefined)
 
   const question = QUESTIONS[currentQ]
   const totalQ = QUESTIONS.length
