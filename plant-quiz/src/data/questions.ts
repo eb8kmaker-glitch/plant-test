@@ -104,7 +104,7 @@ export const QUESTIONS: Question[] = [
     options: [
       { emoji: '🐱', label: '고양이 있음', sub: '집사예요', value: 'cat' },
       { emoji: '🐶', label: '강아지 있음', sub: '댕댕이 집사예요', value: 'dog' },
-      { emoji: '🐾', label: '둘 다 있음', sub: '다중 집사예요', value: 'cat' },
+      { emoji: '🐾', label: '둘 다 있음', sub: '다중 집사예요', value: 'both' },
       { emoji: '🌿', label: '반려동물 없음', sub: '식물만 있으면 돼요', value: 'none' },
     ],
   },
